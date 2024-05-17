@@ -20,7 +20,7 @@ public class EmployeeTablePanel extends JPanel {
 	public EmployeeTablePanel() {
 		setLayout(new BorderLayout());
 		
-		employeeDAOimpl = new EmployeeDAOImpl();
+		employeeDAO = new EmployeeDAOImpl();
 
 		// Create table model with column names
 		String[] columnNames = { "ID", "Name", "Gender", "Phone", "Email", "Designation", "Salary" };

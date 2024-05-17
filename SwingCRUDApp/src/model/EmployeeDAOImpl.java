@@ -7,5 +7,12 @@ public class EmployeeDAOImpl {
 	private static final String DELETE_EMPLOYEE_SQL = "DELETE FROM employees WHERE id = ?;";
 	private static final String UPDATE_EMPLOYEE_SQL = "UPDATE employees SET name = ?, gender = ?, phone = ?, email = ?, designation = ?, salary = ? WHERE id = ?;";
 	
+	@Override
+	public void insertEmployee(Employee employee) throws SQLException {
+		try (Connection connection = DatabaseUtil.getConnection();
+				PreparedStatement preparedStatement = connection.prepareStatement(INSERT_EMPLOYEE_SQL)) {
+			
+		}
+	}
 
 }
